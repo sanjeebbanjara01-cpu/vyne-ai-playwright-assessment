@@ -1,0 +1,18 @@
+{
+  "name": "vyne-ai-playwright-assessment",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright TypeScript framework for SauceDemo UI and JSONPlaceholder API testing",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test tests/ui",
+    "test:api": "playwright test tests/api",
+    "test:headed": "playwright test --headed",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.54.0",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.8.0"
+  }
+}
