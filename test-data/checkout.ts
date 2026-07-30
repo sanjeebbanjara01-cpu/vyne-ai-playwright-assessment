@@ -1,5 +1,5 @@
 export const checkoutCustomer = {
-  firstName: 'Sanjeeb',
-  lastName: 'Banjara',
-  postalCode: '75087',
+  firstName: 'Test',
+  lastName: 'Customer',
+  postalCode: '75001',
 } as const;
