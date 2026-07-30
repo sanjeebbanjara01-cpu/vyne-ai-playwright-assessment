@@ -15,6 +15,19 @@
 - API write tests were corrected so they do not claim JSONPlaceholder permanently stores POST, PUT, or DELETE changes.
 - The framework was kept intentionally small to remain maintainable and appropriate for the exercise time limit.
 
+## Concrete Examples of AI Review and Refinement
+
+| AI-generated output | Problem found | Change made |
+|---|---|---|
+| Generic selectors | The selectors could become brittle and fail when the page structure changes | Replaced them with stable SauceDemo `data-test` selectors |
+| Assumed API changes were persisted | JSONPlaceholder simulates write operations and does not permanently save changes | Validated the immediate POST, PUT, and DELETE responses only |
+| Repeated object creation | Recreating page objects and API clients increased duplication | Added typed Playwright fixtures to centralize initialization |
+| Basic API assertions | Status-only checks provided weak confidence in the API response | Added status-code, content-type, and response-object shape validation |
+| Empty utility classes | The generated utility files added no value and were not used | Removed the empty `logger.ts` and `data-factory.ts` files |
+| Too many possible scenarios | Automating every suggested scenario would exceed the exercise timebox | Selected critical, risk-based authentication, shopping, and API workflows |
+| Hard-coded waits | Fixed waits can make tests slow and unreliable | Used Playwright auto-waiting and web-first assertions |
+| Documentation that did not match the implementation | Early documentation referred to planned or unimplemented coverage | Updated the README and supporting documents to reflect only completed work |
+
 ## Remaining improvements
 
 - Add runtime response-schema validation with a library such as Zod.
